@@ -5,7 +5,7 @@
 #Date :- 09 March 2020
 
 #Declared 3 variables as month, day, year to store the command line arguments 
-
+clear
 month=$1
 day=$2
 year=$3
@@ -18,4 +18,4 @@ m=$(( month + 12 * (( 14 - month ) / 12 ) - 2 ))
 day=$(( ( day + x + 31 * m / 12 ) % 7 )) 
 
 echo "The day is $day"
-
+sleep 2
