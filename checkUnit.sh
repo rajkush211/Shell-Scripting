@@ -1,31 +1,37 @@
 #!/bin/bash -x
 
+clear
+
+unit=1
+ten=10
+hundred=100
+thousand=1000
+tenThousand=10000
+lakh=100000
+tenLakh=1000000
+crore=10000000
+
 read -p "Enter Number to check its place: " number
 
-if [ $number -eq 1 ]
-then
-	echo "Unit"
-elif [ $number -eq 10 ]
-then
-	echo "Ten"
-elif [ $number -eq 100 ]
-then
-	echo "Hundred"
-elif [ $number -eq 1000 ]
-then
-	echo "Thousand"
-elif [ $number -eq 10000 ]
-then
-	echo "Ten Thousand"
-elif [ $number -eq 100000 ]
-then
-	echo "Lakh"
-elif [ $number -eq 1000000 ]
-then
-	echo "Ten Lakh"
-elif [ $number -eq 10000000 ]
-then
-	echo "Crore"
-else
-	echo "Out Of Range"
-fi
+case $number in
+	$unit)
+		echo "UNIT";;
+	$ten)
+		echo "TEN";;
+	$hundred)
+		echo "HUNDRED";;
+	$thousand)
+		echo "THOUSAND";;
+	$tenThousand)
+		echo "TEN THOUSAND";;
+	$lakh)
+		echo "LAKH";;
+	$tenLakh)
+		echo "TEN LAKH";;
+	$crore)
+		echo "CRORE";;
+	*)
+		echo "OUT OF RANGE";;
+esac
+
+sleep 2
