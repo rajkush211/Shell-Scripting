@@ -15,7 +15,7 @@ do
 	do
 		if [ $(( number % i )) -eq 0 ]
 		then
-				((counter++))
+			((counter++))
 		fi
 	done
 
