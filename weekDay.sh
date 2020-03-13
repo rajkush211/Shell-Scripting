@@ -1,28 +1,34 @@
 #!/bin/bash -x
 
+clear
+
+sunday=0
+monday=1
+tuesday=2
+wednesday=3
+thursday=4
+friday=5
+saturday=6
+
 read -p "Enter Day Number(0-6): " dayNumber
 
-if [ $dayNumber -eq 0 ]
-then
-	echo "Sunday"
-elif [ $dayNumber -eq 1 ]
-then
-	echo "Monday"
-elif [ $dayNumber -eq 2 ]
-then
-   echo "Tuesday"
-elif [ $dayNumber -eq 3 ]
-then
-   echo "Wednesday"
-elif [ $dayNumber -eq 4 ]
-then
-   echo "Thursday"
-elif [ $dayNumber -eq 5 ]
-then
-   echo "Friday"
-elif [ $dayNumber -eq 6 ]
-then
-   echo "Saturday"
-else
-	echo "Invalid Day Number!!"
-fi
+case $dayNumber in
+	$sunday)
+		echo "SUNDAY";;
+	$monday)
+		echo "MONDAY";;
+	$tuesday)
+		echo "TUESDAY";;
+	$wednesday)
+		echo "WEDNESDAY";;
+	$thursday)
+		echo "THURSDAY";;
+	$friday)
+		echo "FRIDAY";;
+	$saturday)
+		echo "SATURDAY";;
+	*)
+		echo "INVALID INPUT";;
+esac
+
+sleep 2
