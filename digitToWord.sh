@@ -1,37 +1,43 @@
 #!/bin/bash -x
 
+clear
+
+zero=0
+one=1
+two=2
+three=3
+four=4
+five=5
+six=6
+seven=7
+eight=8
+nine=9
+
 read -p "Enter Single Digit Number: " number
 
-if [ $number -eq 0 ]
-then
-	echo "Zero"
-elif [ $number -eq 1 ]
-then
-	echo "One"
-elif [ $number -eq 2 ]
-then
-   echo "Two"
-elif [ $number -eq 3 ]
-then
-   echo "Three"
-elif [ $number -eq 4 ]
-then
-   echo "Four"
-elif [ $number -eq 5 ]
-then
-   echo "Five"
-elif [ $number -eq 6 ]
-then
-   echo "Six"
-elif [ $number -eq 7 ]
-then
-   echo "Seven"
-elif [ $number -eq 8 ]
-then
-   echo "Eight"
-elif [ $number -eq 9 ]
-then
-   echo "Nine"
-else
-	echo "You Have not Entered Single Digit Number!!"
-fi
+case $number in
+	$zero)
+		echo "ZERO";;
+	$one)
+		echo "ONE";;
+	$two)
+		echo "TWO";;
+	$three)
+		echo "THREE";;
+	$four)
+		echo "FOUR";;
+	$five)
+		echo "FIVE";;
+	$six)
+		echo "SIX";;
+	$seven)
+		echo "SEVEN";;
+	$eight)
+		echo "EIGHT";;
+	$nine)
+		echo "NINE";;
+	*)
+		echo "YOUR NUMBER SHOULD BE ONE DIGIT";;
+esac
+
+sleep 2
