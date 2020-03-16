@@ -47,7 +47,7 @@ function tempConversion() {
 		*)
 			echo "Invalid Choice!!"
 			;;
-esac
+	esac
 
 }
 
