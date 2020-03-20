@@ -8,7 +8,7 @@ MONTHS=12
 for (( person=1; person<=$TOTAL_PERSONS; person++ ))
 do
 	birthMonth=$(( RANDOM % MONTHS + 1 ))
-	birthdays[birthMonth]=$(( ${birthdays[birthMonth]} + 1 ))
+	birthdays[birthMonth]="${birthdays[birthMonth]} $person,"
 done
 
 for (( month=1; month<=$MONTHS; month++ ))
